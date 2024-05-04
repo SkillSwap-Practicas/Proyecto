@@ -8,9 +8,9 @@
 @section('contenido_cSS')
 <link rel="stylesheet" href="{{ asset('/css/styleLoginCss.css') }}">
 
-<link href="{{ asset('/css/estilos.css') }}" rel="stylesheet"> 
+<link href="{{ asset('/css/estilos.css') }}" rel="stylesheet">
 
-<link href="{{ asset('/css/style.css') }}" rel="stylesheet"> 
+<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 @endsection
@@ -29,7 +29,8 @@
                 <h3>¿Aún no tienes una cuenta?</h3>
                 <p>Regístrate para que puedas iniciar sesión</p>
 
-                
+                <button id="btn__registrarse"
+                    onclick="window.location.href='{{ route('registrouser') }}'">Registrate</button>
             </div>
         </div>
 
@@ -59,10 +60,10 @@
                         <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-success">
                         {{ __('Entrar') }}
                     </button>
-                    
+
 
                 </form>
 

@@ -82,55 +82,61 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container-fluid">
             <button class="navbar-toggler navbar-toggler-right border-0 p-0" type="button" data-toggle="collapse" data-target="#navbar20">
                 <p class="navbar-brand text-white mb-0"><span class="navbar-toggler-icon"></span></p>
             </button>
             <div class="collapse navbar-collapse" id="navbar20">
-                <ul class="navbar-nav mr-auto">
-                </ul>
-                <p><a class="d-none d-md-block lead mb-0 text-white" href="{{ route('ServiciosOfrecidos') }}"> <em class="fa d-inline fa-lg fa-stop-circle"></em><strong> SkillSwap</strong></a> </p>
-                <ul class="navbar-nav ml-auto">
-                    @guest
-                        @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
-                            </li>
-                        @endif
+                <div class="col-md-5">
+                    <ul class="navbar-nav mr-auto">
+                        {{--
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('showOccupationService') }}">Oficio</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('showTalentService') }}">Talentos</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('showRetoService') }}">Retos</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('categorias') }}">Categorias</a> </li>
+                        @auth
+                            <a class="nav-link bi bi-table" href="{{ route('tablonservicios') }}"> Tablón</a>
+                        @endauth
+                        --}}
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('login') }}">Servicios</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('login') }}">Talentos</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('login') }}">Retos</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 text-center mx-auto">
+                    <p><a class="d-none d-md-block lead mb-0 text-white" href="{{ route('login') }}"> <em class="fa d-inline fa-lg fa-handshake"></em><strong> SkillSwap</strong></a> </p>
+                </div>
+                <div class="col-md-5 ">
+                    <ul class="navbar-nav justify-content-end">
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a></li>
+                            @endif
 
-                        @if (Route::has('registrouser'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('registrouser') }}">{{ __('Registro') }}</a>
-                            </li>
-                        @endif
-                    @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('bandeja') }}">Buzón clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('offerMyService') }}">Registrar servicio</a>
-                    </li>
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('perfil',Auth::user()->id ) }}">Mi Perfil</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                            @if (Route::has('registrouser'))
+                                <li class="nav-item"><a class="nav-link" href="{{ route('registrouser') }}">{{ __('Registro') }}</a></li>
+                            @endif
+                        @else
+                            <li class="nav-item"><a class="nav-link" href="{{ route('bandeja') }}">Buzón clientes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('offerMyService') }}">Registrar servicio</a></li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
                                 </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
-
-                </ul>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('perfil',Auth::user()->id ) }}">Mi Perfil</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>

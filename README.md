@@ -27,14 +27,14 @@ cd Proyecto
 3. Instala las dependencias de Composer  
 composer install
 
-5. Copia el archivo de entorno de ejemplo  
+4. Copia el archivo de entorno de ejemplo  
 copy .env.example .env
 
-6. Genera la clave de la aplicación  
+5. Genera la clave de la aplicación  
 php artisan key:generate
 
-8. Inicia el Servidor de Desarrollo  
+6. Inicia el Servidor de Desarrollo  
 php artisan serve
 
-10. Accede a la Aplicación  
+7. Accede a la Aplicación  
 Abre tu navegador y visita http://localhost:8000
