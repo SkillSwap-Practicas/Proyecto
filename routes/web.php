@@ -69,7 +69,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/stripe/premium',[PaymentPremiumController::class,'processPaymentPremiumStripe'])->name('proccessPaymentPremiumStripe');
 
     Route::post('/stripe/process2',[ContractController::class,'processPaymentStripe'])->name('proccessPaymentStripe2');
-    
+
     Route::post('/proccessContract',[ContractController::class,'contractProcess'])->name('iPContract');
     Route::post('/registroServTecnico',[ServiceController::class,'registroTecnico'])->name('servicio.tecnico');
     Route::post('/registroServTalento',[ServiceController::class,'registroTalento'])->name('servicio.talento');
@@ -86,7 +86,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/tablonServicios/{id}',[HomeController::class,'eliminarServicio'])->name('servicio.destroy');
 
     Route::get('/tablonServicios', [HomeController::class,'TablonServicios'])->name('tablonservicios');
-    
+
 });
 
 

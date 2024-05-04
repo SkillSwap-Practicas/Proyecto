@@ -173,8 +173,6 @@
             </div>
         </div>
     </div>
-
-    <br>
-
 </div>
+<br><br>
 @endsection

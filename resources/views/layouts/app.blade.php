@@ -100,8 +100,8 @@
                         @endauth
                         --}}
                         <li class="nav-item"> <a class="nav-link" href="{{ route('login') }}">Servicios</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('login') }}">Talentos</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('login') }}">Retos</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('showRetoService') }}">Retos</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('categorias') }}">Categorias</a> </li>
                     </ul>
                 </div>
                 <div class="col-md-2 text-center mx-auto">
@@ -118,14 +118,14 @@
                                 <li class="nav-item"><a class="nav-link" href="{{ route('registrouser') }}">{{ __('Registro') }}</a></li>
                             @endif
                         @else
-                            <li class="nav-item"><a class="nav-link" href="{{ route('bandeja') }}">Buzón clientes</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('offerMyService') }}">Registrar servicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Buzón clientes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Registrar servicio</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('perfil',Auth::user()->id ) }}">Mi Perfil</a>
+                                    <a class="dropdown-item" href="{{ route('login',Auth::user()->id ) }}">Mi Perfil</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
@@ -179,8 +179,8 @@
                         <div class="footer-menu">
                             <h2 class="footer-wid-title">Tipos de servicios</h2>
                             <ul>
-                                <li><a href="{{ route('showOccupationService') }}">Oficios</a></li>
-                                <li><a href="{{ route('showTalentService') }}">Talentos</a></li>
+                                <li><a href="{{ route('login') }}">Oficios</a></li>
+                                <li><a href="{{ route('login') }}">Talentos</a></li>
                             </ul>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                             <h2 class="footer-wid-title">Premium</h2>
                             <p>Subscribete a nuestra versión premium para acceder a mayores beneficios!</p>
                             <div class="newsletter-form">
-                                <input type="submit" onclick="window.location.href='{{route('premium')}}'" value="Suscribete">
+                                <input type="submit" onclick="window.location.href='{{route('login')}}'" value="Suscribete">
                             </div>
 
                         </div>
