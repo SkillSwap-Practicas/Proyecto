@@ -27,7 +27,10 @@ use App\Http\Controllers\VideoController;
 |
 */
 Route::get('/mandarina/{dni}',[HomeController::class,'mandarina'])->name("mandarina");
-Route::get('/',[HomeController::class,'showOccupationService'])->name('ServiciosOfrecidos');
+/*Route::get('/',[HomeController::class,'showOccupationService'])->name('ServiciosOfrecidos'); */
+Route::get('/', function() {
+    return view('login');
+  })->name('login');
 Route::get('/talentService',[HomeController::class,'showTalentService'])->name('showTalentService');
 Route::get('/occupationService',[HomeController::class,'showOccupationService'])->name('showOccupationService');
 Route::get('/retoService',[HomeController::class,'showRetoService'])->name('showRetoService');
