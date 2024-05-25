@@ -71,10 +71,10 @@
                                     @endif
                                 </div>
 
-                                <h2><a href="{{ route('showProfileServiceTalent',$service->id) }}">
+                                <h2><a href="{{ route('showProfileServiceTalent',$service->id) }}" style="color:LimeGreen;">
                                     {{ $service->ser_tal_name }}</a></h2>
                                 <div class="product-carousel-price">
-                                    <a href="{{ route('perfil',$service->use_id) }}">
+                                    <a href="{{ route('perfil',$service->use_id) }}" style="color:LimeGreen;">
                                         {{ $service->IntermediateUseTal->name }}</a>
                                 </div>
                                 <div class="product-carousel-price description-service">
@@ -106,7 +106,7 @@
                                     </ul>
                                 </h4>
                                 <div class="product-carousel-price">
-                                    <ins>${{ $service->precio }}</ins>
+                                    <ins style="color:LimeGreen;">${{ $service->precio }}</ins>
                                 </div>
                                 
                                 <div class="product-option-shop">
@@ -116,7 +116,7 @@
                                         data-product_sku=""
                                         data-product_id="70"
                                         rel="nofollow"
-                                        href="{{ route('showProfileServiceTalent',$service->id) }}">Ver más</a>
+                                        href="{{ route('showProfileServiceTalent',$service->id) }}" style="background-color: LimeGreen;">Ver más</a>
                                     <div class="premium-image">
                                         <img src="img/premium.png"
                                              width="50"
@@ -146,11 +146,11 @@
                                 </div>
 
                                 <h2><a
-                                     href="{{ route('showProfileServiceTalent',$service->id) }}">
+                                     href="{{ route('showProfileServiceTalent',$service->id) }}" style="color:LimeGreen;">
                                      {{ $service->ser_tal_name }}</a></h2>
                                 <div class="product-carousel-price">
                                     <a
-                                        href="{{ route('perfil',$service->use_id) }}">
+                                        href="{{ route('perfil',$service->use_id) }}" style="color:LimeGreen;">
                                         {{ $service->IntermediateUseTal->name }}</a>
                                 </div>
                                 <div class="product-carousel-price description-service">
@@ -183,7 +183,7 @@
                                     </ul>
                                 </h4>
                                 <div class="product-carousel-price">
-                                    <ins>${{ $service->precio }}</ins>
+                                    <ins style="color:LimeGreen;">${{ $service->precio }}</ins>
                                 </div>
                                 
                                 <div class="product-option-shop">
@@ -193,7 +193,7 @@
                                         data-product_sku=""
                                         data-product_id="70"
                                         rel="nofollow"
-                                        href="{{ route('showProfileServiceTalent',$service->id) }}">Ver más</a>
+                                        href="{{ route('showProfileServiceTalent',$service->id) }}" style="background-color: LimeGreen;">Ver más</a>
                                 </div>
                             </div>
                         </div>

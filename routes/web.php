@@ -27,10 +27,7 @@ use App\Http\Controllers\VideoController;
 |
 */
 Route::get('/mandarina/{dni}',[HomeController::class,'mandarina'])->name("mandarina");
-/*Route::get('/',[HomeController::class,'showOccupationService'])->name('ServiciosOfrecidos'); */
-Route::get('/', function() {
-    return view('login');
-  })->name('login');
+Route::get('/',[HomeController::class,'showOccupationService'])->name('ServiciosOfrecidos');
 Route::get('/talentService',[HomeController::class,'showTalentService'])->name('showTalentService');
 Route::get('/occupationService',[HomeController::class,'showOccupationService'])->name('showOccupationService');
 Route::get('/retoService',[HomeController::class,'showRetoService'])->name('showRetoService');
@@ -72,7 +69,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/stripe/premium',[PaymentPremiumController::class,'processPaymentPremiumStripe'])->name('proccessPaymentPremiumStripe');
 
     Route::post('/stripe/process2',[ContractController::class,'processPaymentStripe'])->name('proccessPaymentStripe2');
-
+    
     Route::post('/proccessContract',[ContractController::class,'contractProcess'])->name('iPContract');
     Route::post('/registroServTecnico',[ServiceController::class,'registroTecnico'])->name('servicio.tecnico');
     Route::post('/registroServTalento',[ServiceController::class,'registroTalento'])->name('servicio.talento');
@@ -89,7 +86,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/tablonServicios/{id}',[HomeController::class,'eliminarServicio'])->name('servicio.destroy');
 
     Route::get('/tablonServicios', [HomeController::class,'TablonServicios'])->name('tablonservicios');
-
+    
 });
 
 
@@ -167,6 +164,3 @@ Route::post('/send-message',function(Request $request){
 Broadcast::channel('chat', function () {
     return Auth::check();
 });
-
-
-
