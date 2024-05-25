@@ -50,7 +50,7 @@
                           <li class="nav-item" role="presentation">
                           <a class="nav-link @if (Route::currentRouteName() != 'offerMyServiceChange') active @endif"
                           id="service-tab" data-toggle="tab" href="#service" role=" pestaña" aria-controls="servicio" aria-selected="true">
-                              <button type="button" class="btn btn-primary btn-lg">Servicio Técnico</button>
+                              <button type="button" class="btn btn-lg" style="background-color: rgba(0, 128, 0, 0.9); color: white;">Servicio Técnico</button>
                             </a>
                           </li>
                           <li class="nav-item" role="presentation">
@@ -61,7 +61,7 @@
                           <li class="nav-item" role="presentation">
                           <a class="nav-link @if (Route::currentRouteName() == 'offerMyServiceChange') active @endif"
                           id="reto-tab" data-toggle="tab" href="#reto" role=" pestaña" aria-controls="reto" aria-selected="false">
-                              <button type="button" class="btn btn-info btn-lg">Reto</button>
+                              <button type="button" class="btn btn-lg" style="background-color: rgba(0, 128, 0, 0.7); color: white;">Reto</button>
                             </a>
                           </li>
 
@@ -135,7 +135,7 @@
                                 Maximo Tamaño : 2048x2048px
                               </p>
                             </div>
-                          <button type="submit" class="btn btn-primary">Guardar servicio</button>
+                          <button type="submit" class="btn btn-primary" style="background-color: rgba(0, 128, 0, 0.9);" >Guardar servicio</button>
                         </form>
                       </div>
                       {{-- Registro de Talento --}}
