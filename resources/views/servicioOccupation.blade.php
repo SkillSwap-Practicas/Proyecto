@@ -53,10 +53,10 @@
                                     style="width:512px !important;"/>
                             </div>
                             <div class="col-md-6">
-                                <h1 class="display-5 fw-bolder">{{ $serviceProfile->ser_occ_name }}</h1>
+                                <h1 class="display-5 fw-bolder" style="color:LimeGreen;">{{ $serviceProfile->ser_occ_name }}</h1>
 
                                 <a href="{{ route('perfil',$serviceProfile->IntermediateUseOcc->id) }}"
-                                    class="h5 fw-bolder">
+                                    class="h5 fw-bolder" style="color:LimeGreen;">
                                     {{ $serviceProfile->IntermediateUseOcc->name." ".$serviceProfile->IntermediateUseOcc->lastname }}
                                 </a>
                                 <br>
@@ -200,10 +200,10 @@
                                 alt="..." />
                             </div>
                             <div class="col-md-6">
-                                <h1 class="display-5 fw-bolder">{{ $serviceProfile->ser_occ_name }}</h1>
+                                <h1 class="display-5 fw-bolder" style="color:LimeGreen;">{{ $serviceProfile->ser_occ_name }}</h1>
 
                                 <a href="{{ route('perfil',$serviceProfile->IntermediateUseOcc->id) }}"
-                                    class="h5 fw-bolder">
+                                    class="h5 fw-bolder" style="color:LimeGreen;">
                                     {{ $serviceProfile->IntermediateUseOcc->name." ".$serviceProfile->IntermediateUseOcc->lastname }}
                                 </a>
                                 <br>
@@ -685,7 +685,7 @@
                                 <button
                                      type="submit"
                                      class="btn"
-                                     style="background-color: rgba(10, 169, 190, 0.61)">Comentar</button>
+                                     style="background-color: LimeGreen;">Comentar</button>
                             </div>
                         </div>
                     </div>
@@ -727,7 +727,7 @@
                                     <a
                                          class="text-decoration-none"
                                          href="{{ route('perfil',$coment->PostCommentUser->id) }}">
-                                        <h2 class="text-capitalize h5 mb-0">{{ $coment->PostCommentUser->name }}</h2>
+                                        <h2 class="text-capitalize h5 mb-0" style="color:LimeGreen;">{{ $coment->PostCommentUser->name }}</h2>
                                     </a>
                                     <p class="small text-secondary m-0 mt-1">Posteado el {{ $coment->created_at }}</p>
                                 </div>
@@ -780,7 +780,7 @@
                                                      type="submit"
                                                      style="border: none;
                                                             background-color:transparent;
-                                                            color:#007bff !important;
+                                                            color:LimeGreen !important;
                                                             text-transform:none !important;padding:0px">
                                                     <em class="fa fa-thumbs-up"></em>  Me gusta
                                                 </button>
@@ -803,7 +803,7 @@
                                                          type="submit"
                                                          style="border: none;
                                                                 background-color:transparent;
-                                                                color:#007bff !important;
+                                                                color:LimeGreen !important;
                                                                 text-transform:none !important;padding:0px">
                                                         <em class="far fa-thumbs-up"></em>  Me gusta
                                                     </button>
@@ -817,7 +817,7 @@
                                                      onclick="window.location.href='{{ route('registrouser') }}'"
                                                      style="border: none;
                                                             background-color:transparent;
-                                                            color:#007bff !important;text-transform:none !important;
+                                                            color:LimeGreen !important;text-transform:none !important;
                                                             padding:0px">
                                                     <em class="far fa-thumbs-up"></em>  Me gusta
                                                 </button>
@@ -836,8 +836,8 @@
                                                  href="#id{{$coment->id}}"
                                                  role="button"
                                                  aria-expanded="false"
-                                                 aria-controls="collapseExample">
-                                                <em class="fas fa-comment-alt"></em>
+                                                 aria-controls="collapseExample" style="color:LimeGreen;">
+                                                <em class="fas fa-comment-alt" ></em>
                                                 {{ $coment->UseComPostAnswer->count() }} Comentario
                                             </a>
                                         </li>
@@ -878,7 +878,7 @@
                                                         <button
                                                              class="text-decoration-none
                                                              text-white btn btn-primary"
-                                                             style="background-color: rgb(0, 0, 0)">Responder</button>
+                                                             style="background-color: LimeGreen">Responder</button>
                                                     </div>
                                                     @error('comentarioRespuesta')
                                                         <span class="invalid-feedback" role="alert">
@@ -923,7 +923,7 @@
                                                     <div class="flex-grow-1 pl-2">
                                                         <a
                                                              class="text-decoration-none text-capitalize h6 m-0"
-                                                             href="#">{{ $comentR->PostCommentUser->name }}</a><label
+                                                             href="#" style="color:LimeGreen;">{{ $comentR->PostCommentUser->name }}</a><label
                                                              class="text-muted small"> &nbsp;
                                                              Respondiendo a {{ $coment->PostCommentUser->name }}</label>
                                                         <p class="small m-0 text-muted">Posteado el
