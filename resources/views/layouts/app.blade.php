@@ -90,12 +90,13 @@
             <div class="collapse navbar-collapse" id="navbar20">
                 <div class="col-md-5">
                     <ul class="navbar-nav mr-auto">
-                        
+
                         <li class="nav-item"> <a class="nav-link" href="{{ route('showOccupationService') }}">Oficio</a> </li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('showTalentService') }}">Talentos</a> </li>
 
-                        {{--
+
                         <li class="nav-item"> <a class="nav-link" href="{{ route('showRetoService') }}">Retos</a> </li>
+                        {{--
                         <li class="nav-item"> <a class="nav-link" href="{{ route('categorias') }}">Categorias</a> </li>
                         --}}
 
@@ -127,11 +128,11 @@
                                 <li class="nav-item"><a class="nav-link" href="{{ route('registrouser') }}">{{ __('Registro') }}</a></li>
                             @endif
                         @else
-                        {{--
+
                             <li class="nav-item"><a class="nav-link" href="{{ route('bandeja') }}">Buzón clientes</a></li>
-                        --}}
+
                             <li class="nav-item"><a class="nav-link" href="{{ route('offerMyService') }}">Registrar servicio</a></li>
-                        
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

@@ -177,7 +177,7 @@
                             <h1 class="display-5 fw-bolder">{{ $serviceProfile->IntermediateChange->cha_name }}</h1>
 
                             <a href="{{ route('perfil',$serviceProfile->IntermediateUseOcc->id) }}"
-                               class="h5 fw-bolder">
+                               class="h5 fw-bolder" style="color:LimeGreen;">
                                {{ $serviceProfile->IntermediateUseOcc->name." ".$serviceProfile->IntermediateUseOcc->lastname }}
                             </a>
                             <br>
