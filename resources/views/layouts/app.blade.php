@@ -96,26 +96,20 @@
 
 
                         <li class="nav-item"> <a class="nav-link" href="{{ route('showRetoService') }}">Retos</a> </li>
-                        {{--
                         <li class="nav-item"> <a class="nav-link" href="{{ route('categorias') }}">Categorias</a> </li>
-                        --}}
 
-                        {{--
+
                         @auth
                             <a class="nav-link bi bi-table" href="{{ route('tablonservicios') }}"> Tablón</a>
                         @endauth
-                        --}}
-
-                        {{--
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('login') }}">Servicios</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('showRetoService') }}">Retos</a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('categorias') }}">Categorias</a> </li>
-
-                        --}}
                     </ul>
                 </div>
                 <div class="col-md-2 text-center mx-auto">
-                    <p><a class="d-none d-md-block lead mb-0 text-white" href="{{ route('login') }}"> <em class="fa d-inline fa-lg fa-handshake"></em><strong> SkillSwap</strong></a> </p>
+                    <p>
+                    <a class="d-none d-md-block lead mb-0 text-white" href="{{ route('showOccupationService') }}">
+                        <img src="../img/logoSkillSwap.png" alt="SkillSwap Logo" style="max-width: 80%; height: auto;">
+                    </a>
+                    </p>
                 </div>
                 <div class="col-md-5 ">
                     <ul class="navbar-nav justify-content-end">
